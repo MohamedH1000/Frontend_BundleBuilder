@@ -65,16 +65,21 @@ export function StepSection({ step }: StepSectionProps) {
             ))}
           </div>
 
+          <div className="flex justify-center ">
           {nextStepMeta && (
             <button
               type="button"
               onClick={nextStep}
-              className="mt-[18px] inline-flex items-center gap-1.5 rounded-[10px] border-[2px] border-brand px-[22px] py-3 text-[15px] font-semibold text-brand shadow-[0_6px_16px_rgba(78,47,210,0.35)] transition-colors active:translate-y-px"
+              className="mt-[18px] inline-flex items-center gap-1.5 rounded-[10px] 
+              border-[2px] border-brand px-[22px] py-3 text-[15px] font-semibold 
+              text-brand shadow-[0_6px_16px_rgba(78,47,210,0.35)] 
+              transition-colors active:translate-y-px cursor-pointer"
             >
               Next: {nextStepMeta.title}
               <Icon name="chevron-down" size={18} className="-rotate-90" />
             </button>
           )}
+            </div>
         </div>
       )}
     </section>
