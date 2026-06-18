@@ -19,13 +19,14 @@
   background: var(--surface-alt);
 }
 
+/* Eyebrow + step icons are the design's muted grey (#6f7882), not brand purple. */
 .eyebrow {
   display: block;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--brand);
+  color: var(--text-secondary);
   margin-bottom: 6px;
 }
 
@@ -35,22 +36,18 @@
   gap: 12px;
 }
 
+/* No chip around the step icon — it sits directly, exactly as in the design. */
 .icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-sm);
-  background: var(--brand-soft);
-  color: var(--brand);
   flex: none;
 }
 
 .title {
   font-size: 18px;
   font-weight: 700;
-  color: var(--text-strong);
+  color: var(--text);
   flex: 1 1 auto;
   min-width: 0;
 }
@@ -65,7 +62,7 @@
 .count {
   font-size: 13px;
   font-weight: 600;
-  color: var(--brand);
+  color: var(--text-secondary);
 }
 
 .chevron {
@@ -73,9 +70,12 @@
   color: var(--text-secondary);
 }
 
-/* ---- open panel ---- */
+/* ---- open panel ----
+ * The expanded content sits on a tinted surface (--step-open-bg), the
+ * "background colour" the open accordion has in the design. */
 .panel {
-  padding: 4px 16px 22px;
+  background: var(--step-open-bg);
+  padding: 18px 16px 22px;
   animation: reveal var(--dur) var(--ease);
 }
 
@@ -142,7 +142,7 @@
   }
 
   .panel {
-    padding: 2px 14px 18px;
+    padding: 14px 14px 18px;
   }
 
   .grid {

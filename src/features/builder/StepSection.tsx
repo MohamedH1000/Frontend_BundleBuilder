@@ -3,7 +3,7 @@ import { useBundle } from "../../state/BundleContext";
 import { productsByStep } from "../../data/catalog";
 import { steps } from "../../data/catalog";
 import { ProductCard } from "../../components/ProductCard";
-import { Icon, type IconName } from "../../components/icons";
+import { Icon, StepIcon } from "../../components/icons";
 import styles from "./StepSection.module.css";
 
 interface StepSectionProps {
@@ -43,7 +43,7 @@ export function StepSection({ step }: StepSectionProps) {
 
         <span className={styles.headerRow}>
           <span className={styles.icon} aria-hidden>
-            <Icon name={step.icon as IconName} size={24} />
+            <StepIcon name={step.icon} size={26} />
           </span>
           <span className={styles.title}>{step.title}</span>
 

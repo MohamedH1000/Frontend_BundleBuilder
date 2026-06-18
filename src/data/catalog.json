@@ -5,7 +5,7 @@
       "index": 1,
       "total": 4,
       "title": "Choose your cameras",
-      "icon": "camera",
+      "icon": "camera-art",
       "category": "cameras"
     },
     {
@@ -13,7 +13,7 @@
       "index": 2,
       "total": 4,
       "title": "Choose your plan",
-      "icon": "plan",
+      "icon": "shield-hms",
       "category": "plan"
     },
     {
@@ -21,7 +21,7 @@
       "index": 3,
       "total": 4,
       "title": "Choose your sensors",
-      "icon": "sensor",
+      "icon": "sensor-art",
       "category": "sensors"
     },
     {
@@ -29,7 +29,7 @@
       "index": 4,
       "total": 4,
       "title": "Add extra protection",
-      "icon": "shield",
+      "icon": "keypad-art",
       "category": "accessories"
     }
   ],

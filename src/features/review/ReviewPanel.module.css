@@ -1,7 +1,9 @@
 .review {
   background: var(--review-bg);
   border-radius: var(--radius-xl);
-  padding: 26px 22px 22px;
+  /* top padding matches the builder's first step-header padding (18px) so the
+     review's first line sits level with "Step 1 of 4" on desktop. */
+  padding: 18px 22px 22px;
   box-shadow: var(--shadow-card);
 }
 

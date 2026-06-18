@@ -27,6 +27,8 @@
   --review-bg: #edf4ff;
   --surface: #ffffff;
   --surface-alt: #f7f9fc;
+  /* Background of an expanded step's content area. */
+  --step-open-bg: #f4f5f7;
 
   /* Text */
   --text: #0b0d10;
