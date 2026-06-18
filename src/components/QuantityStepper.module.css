@@ -1,0 +1,61 @@
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand);
+  background: var(--brand-soft);
+  border-radius: var(--radius-pill);
+  transition: background var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--brand-tint);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.92);
+}
+
+.btn:disabled {
+  color: var(--text-muted);
+  background: var(--surface-alt);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.value {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text);
+  min-width: 1ch;
+}
+
+/* card variant — matches the ~20px touch targets in the design */
+.card .btn {
+  width: 30px;
+  height: 30px;
+}
+
+.card .value {
+  font-size: 15px;
+  min-width: 1.25rem;
+}
+
+/* review-line variant — more compact */
+.line .btn {
+  width: 24px;
+  height: 24px;
+}
+
+.line .value {
+  font-size: 14px;
+  min-width: 1rem;
+}

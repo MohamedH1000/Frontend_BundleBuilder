@@ -1,0 +1,7 @@
+.builder {
+  background: var(--surface);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}

@@ -1,0 +1,128 @@
+.page {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+/* ---- top bar ---- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 60px;
+  padding: 0 24px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid var(--divider);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-strong);
+}
+
+.brand:hover {
+  text-decoration: none;
+}
+
+.brandMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: var(--brand);
+  color: var(--on-brand);
+}
+
+.brandName {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.brandSub {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding-left: 14px;
+  border-left: 1px solid var(--divider);
+}
+
+/* ---- two-column layout ---- */
+.layout {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 28px 24px 48px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.footer {
+  padding: 20px 24px 32px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ---- desktop: builder (left) + sticky review (right) ---- */
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) var(--review-span);
+    gap: var(--col-gap);
+    align-items: start;
+  }
+
+  .reviewCol {
+    position: sticky;
+    top: 84px;
+    max-height: calc(100vh - 108px);
+    overflow-y: auto;
+    /* slim scrollbar for the sticky summary */
+    scrollbar-width: thin;
+    scrollbar-color: var(--divider-strong) transparent;
+  }
+
+  .reviewCol::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .reviewCol::-webkit-scrollbar-thumb {
+    background: var(--divider-strong);
+    border-radius: var(--radius-pill);
+  }
+}
+
+@media (min-width: 1280px) {
+  .layout {
+    padding-top: 36px;
+  }
+}
+
+/* ---- tablet & phone ---- */
+@media (max-width: 1023px) {
+  .topbar {
+    padding: 0 16px;
+  }
+
+  .layout {
+    padding: 20px 16px 40px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .brandSub {
+    display: none;
+  }
+}

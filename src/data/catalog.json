@@ -1,0 +1,227 @@
+{
+  "steps": [
+    {
+      "id": "cameras",
+      "index": 1,
+      "total": 4,
+      "title": "Choose your cameras",
+      "icon": "camera",
+      "category": "cameras"
+    },
+    {
+      "id": "plan",
+      "index": 2,
+      "total": 4,
+      "title": "Choose your plan",
+      "icon": "plan",
+      "category": "plan"
+    },
+    {
+      "id": "sensors",
+      "index": 3,
+      "total": 4,
+      "title": "Choose your sensors",
+      "icon": "sensor",
+      "category": "sensors"
+    },
+    {
+      "id": "accessories",
+      "index": 4,
+      "total": 4,
+      "title": "Add extra protection",
+      "icon": "shield",
+      "category": "accessories"
+    }
+  ],
+  "products": [
+    {
+      "id": "cam-v4",
+      "name": "Wyze Cam v4",
+      "description": "The clearest Wyze Cam ever made.",
+      "longDescription": "Color night vision and a built-in spotlight in our sharpest camera yet.",
+      "category": "cameras",
+      "step": "cameras",
+      "icon": "camera",
+      "learnMoreUrl": "#cam-v4",
+      "variants": [
+        { "id": "white", "label": "White", "swatch": "#ffffff" },
+        { "id": "grey", "label": "Grey", "swatch": "#b9bcc4" },
+        { "id": "black", "label": "Black", "swatch": "#1f2230" }
+      ],
+      "price": 27.98,
+      "compareAt": 35.98
+    },
+    {
+      "id": "cam-pan-v3",
+      "name": "Wyze Cam Pan v3",
+      "description": "360° pan and 180° tilt security camera.",
+      "longDescription": "Cover every corner with smooth pan, tilt and IP65 weather resistance.",
+      "category": "cameras",
+      "step": "cameras",
+      "icon": "pan",
+      "badge": "Save 12%",
+      "learnMoreUrl": "#cam-pan-v3",
+      "variants": [
+        { "id": "white", "label": "White", "swatch": "#ffffff" },
+        { "id": "black", "label": "Black", "swatch": "#1f2230" }
+      ],
+      "price": 34.98,
+      "compareAt": 39.98
+    },
+    {
+      "id": "cam-floodlight-v2",
+      "name": "Wyze Cam Floodlight v2",
+      "description": "2K floodlight camera with a 160° wide-angle view.",
+      "longDescription": "Motion-activated LED floodlight and a 160° field of view.",
+      "category": "cameras",
+      "step": "cameras",
+      "icon": "floodlight",
+      "badge": "Save 22%",
+      "learnMoreUrl": "#cam-floodlight-v2",
+      "variants": [
+        { "id": "white", "label": "White", "swatch": "#ffffff" },
+        { "id": "black", "label": "Black", "swatch": "#1f2230" }
+      ],
+      "price": 69.98,
+      "compareAt": 89.98
+    },
+    {
+      "id": "duo-doorbell",
+      "name": "Wyze Duo Cam Doorbell",
+      "description": "Two cameras. Two views. Double the porch protection.",
+      "longDescription": "Front and down-facing cameras for a complete view of your doorstep.",
+      "category": "cameras",
+      "step": "cameras",
+      "icon": "doorbell",
+      "learnMoreUrl": "#duo-doorbell",
+      "price": 69.98
+    },
+    {
+      "id": "battery-cam-pro",
+      "name": "Wyze Battery Cam Pro",
+      "description": "Protect anywhere. See everything in 2.5K HD.",
+      "longDescription": "Wire-free security with a removable battery and spotlight.",
+      "category": "cameras",
+      "step": "cameras",
+      "icon": "battery",
+      "learnMoreUrl": "#battery-cam-pro",
+      "variants": [
+        { "id": "white", "label": "White", "swatch": "#ffffff" },
+        { "id": "black", "label": "Black", "swatch": "#1f2230" }
+      ],
+      "price": 89.98
+    },
+
+    {
+      "id": "plan-cam-unlimited",
+      "name": "Cam Unlimited",
+      "description": "Unlimited cameras, unlimited events, 14-day cloud recording.",
+      "longDescription": "Add as many cameras as you want with unlimited cloud events.",
+      "category": "plan",
+      "step": "plan",
+      "icon": "plan",
+      "learnMoreUrl": "#cam-unlimited",
+      "recurring": "monthly",
+      "price": 9.99,
+      "compareAt": 12.99
+    },
+    {
+      "id": "plan-cam-plus",
+      "name": "Cam Plus",
+      "description": "Person detection and 14-day cloud recording per camera.",
+      "longDescription": "Cloud video recording and smart alerts for a single camera.",
+      "category": "plan",
+      "step": "plan",
+      "icon": "plan",
+      "learnMoreUrl": "#cam-plus",
+      "recurring": "monthly",
+      "price": 2.99,
+      "compareAt": 4.99
+    },
+
+    {
+      "id": "sensor-motion",
+      "name": "Wyze Sense Motion Sensor",
+      "description": "Get notified the instant motion is detected.",
+      "longDescription": "Motion detection with a 120° field of view and 26 ft range.",
+      "category": "sensors",
+      "step": "sensors",
+      "icon": "motion",
+      "learnMoreUrl": "#motion-sensor",
+      "price": 29.99
+    },
+    {
+      "id": "sensor-hub",
+      "name": "Wyze Sense Hub",
+      "description": "The brain of your system — required to connect sensors.",
+      "longDescription": "Required to connect Wyze Sense sensors. Included free with your bundle.",
+      "category": "sensors",
+      "step": "sensors",
+      "icon": "hub",
+      "learnMoreUrl": "#sense-hub",
+      "price": 0,
+      "compareAt": 29.92,
+      "free": true,
+      "required": true,
+      "minQty": 1
+    },
+    {
+      "id": "sensor-entry",
+      "name": "Wyze Sense Entry Sensor",
+      "description": "Know the moment a door or window opens.",
+      "longDescription": "Compact contact sensor for doors and windows.",
+      "category": "sensors",
+      "step": "sensors",
+      "icon": "entry",
+      "learnMoreUrl": "#entry-sensor",
+      "price": 19.99
+    },
+
+    {
+      "id": "sdcard-256",
+      "name": "Wyze MicroSD Card (256GB)",
+      "description": "Storage for continuous, local 24/7 recording.",
+      "longDescription": "Class 10, UHS-I (U3) microSD card for around-the-clock recording.",
+      "category": "accessories",
+      "step": "accessories",
+      "icon": "sdcard",
+      "learnMoreUrl": "#microsd-256",
+      "price": 20.98
+    },
+    {
+      "id": "sdcard-64",
+      "name": "Wyze MicroSD Card (64GB)",
+      "description": "Reliable storage for event recording.",
+      "longDescription": "Class 10 microSD card for event-based recording.",
+      "category": "accessories",
+      "step": "accessories",
+      "icon": "sdcard",
+      "learnMoreUrl": "#microsd-64",
+      "price": 9.99
+    },
+    {
+      "id": "sensor-keypad",
+      "name": "Wyze Sense Keypad",
+      "description": "Arm and disarm your system from one place.",
+      "longDescription": "Wall-mountable keypad with Home, Away and Disarm modes.",
+      "category": "accessories",
+      "step": "accessories",
+      "icon": "keypad",
+      "learnMoreUrl": "#sense-keypad",
+      "price": 29.99
+    },
+
+    {
+      "id": "fast-shipping",
+      "name": "Fast Shipping",
+      "description": "Free, fast delivery on your order.",
+      "category": "accessories",
+      "step": "accessories",
+      "icon": "truck",
+      "price": 0,
+      "compareAt": 5.99,
+      "free": true,
+      "shipping": true
+    }
+  ]
+}

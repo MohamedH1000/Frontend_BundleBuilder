@@ -1,0 +1,209 @@
+.review {
+  background: var(--review-bg);
+  border-radius: var(--radius-xl);
+  padding: 26px 22px 22px;
+  box-shadow: var(--shadow-card);
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-bottom: 8px;
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-strong);
+  line-height: 1.2;
+}
+
+.subtitle {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+/* ---- line items ---- */
+.items {
+  margin-top: 18px;
+}
+
+.group {
+  padding: 6px 0;
+  border-top: 1px solid var(--divider);
+}
+
+.group:first-child {
+  border-top: none;
+}
+
+.groupTitle {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  margin: 8px 0 2px;
+}
+
+.shippingGroup {
+  border-top: 1px solid var(--divider);
+  padding-top: 10px;
+  margin-top: 6px;
+}
+
+.empty {
+  padding: 24px 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* ---- summary card ---- */
+.summaryCard {
+  margin-top: 18px;
+  padding: 18px;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.summaryTop {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.seal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  flex: none;
+  border-radius: var(--radius-pill);
+  color: var(--success);
+  background: var(--success-soft);
+}
+
+.totals {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.financing {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.totalRow {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.totalCompare {
+  font-size: 14px;
+  color: var(--price-compare);
+  text-decoration: line-through;
+}
+
+.totalActive {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--brand);
+  line-height: 1;
+}
+
+.savings {
+  margin-top: 14px;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--success-soft);
+  color: var(--success);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.checkoutMsg {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.checkout {
+  margin-top: 14px;
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: var(--radius-md);
+  background: var(--brand);
+  color: var(--on-brand);
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px var(--ring);
+  transition: background var(--dur-fast) var(--ease),
+    transform var(--dur-fast) var(--ease);
+}
+
+.checkout:hover {
+  background: var(--brand-hover);
+}
+
+.checkout:active {
+  transform: translateY(1px);
+}
+
+/* ---- save link ---- */
+.saveRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.saveLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brand);
+}
+
+.saveLink:hover {
+  text-decoration: underline;
+}
+
+.savedToast {
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--success);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  animation: pop var(--dur) var(--ease);
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

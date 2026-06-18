@@ -1,0 +1,173 @@
+/* ============================================================================
+ * Design Tokens
+ * ----------------------------------------------------------------------------
+ * Brand colors below (#4e2fd2 indigo, #0aa288 green, #edf4ff review panel) were
+ * sampled directly from the source Figma render by decoding the exported PNG,
+ * not guessed. A few tokens (selected-card border, discount-badge fill) belong
+ * to elements that only appear in the desktop "builder" view, whose screenshot
+ * could not be exported under the Figma MCP rate limit; those reuse the
+ * confirmed brand/success tokens and are flagged in the README for refinement.
+ * ========================================================================== */
+
+:root {
+  /* Brand */
+  --brand: #4e2fd2;
+  --brand-hover: #3f23b8;
+  --brand-active: #341ca0;
+  --brand-soft: #f2effb;
+  --brand-softer: #f7f5fd;
+  --brand-tint: #e7e2f8;
+
+  /* Semantic */
+  --success: #0aa288;
+  --success-soft: #e6f6f2;
+
+  /* Surfaces */
+  --bg: #ffffff;
+  --review-bg: #edf4ff;
+  --surface: #ffffff;
+  --surface-alt: #f7f9fc;
+
+  /* Text */
+  --text: #0b0d10;
+  --text-strong: #000000;
+  --text-secondary: #6f7882;
+  --text-muted: #98a0ab;
+  --on-brand: #ffffff;
+
+  /* Prices */
+  --price-active: var(--brand);
+  --price-compare: #9aa1ab;
+
+  /* Lines */
+  --divider: #dde3ed;
+  --divider-strong: #c9d2df;
+  --ring: rgba(78, 47, 210, 0.35);
+
+  /* Radii */
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-pill: 999px;
+
+  /* Elevation */
+  --shadow-card: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
+  --shadow-pop: 0 12px 32px rgba(16, 24, 40, 0.12);
+  --shadow-focus: 0 0 0 3px var(--ring);
+
+  /* Type */
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+
+  /* Motion */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 120ms;
+  --dur: 200ms;
+
+  /* Layout */
+  --container-max: 1196px; /* Figma: builder(768) + gap(29) + review(399) */
+  --col-gap: 29px;
+  --builder-span: 768px;
+  --review-span: 399px;
+
+  color-scheme: light;
+}
+
+/* ----------------------------------------------------------------------------
+ * Reset
+ * -------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input,
+button,
+select {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+  border-radius: var(--radius-sm);
+}
+
+/* ----------------------------------------------------------------------------
+ * Helpers
+ * -------------------------------------------------------------------------- */
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
