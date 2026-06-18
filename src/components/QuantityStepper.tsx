@@ -1,5 +1,5 @@
 import { Icon } from "./icons";
-import styles from "./QuantityStepper.module.css";
+import { cn } from "../lib/cn";
 
 interface QuantityStepperProps {
   value: number;
@@ -31,29 +31,42 @@ export function QuantityStepper({
 }: QuantityStepperProps) {
   const atMin = value <= min;
   const atMax = value >= max;
+  const iconSize = size === "line" ? 14 : 16;
+
+  const btnClass = cn(
+    "inline-flex items-center justify-center rounded-full bg-brand-soft text-brand transition-colors hover:bg-brand-tint active:scale-95",
+    "disabled:cursor-not-allowed disabled:bg-surface-alt disabled:text-ink-faint disabled:opacity-70",
+    size === "line" ? "h-6 w-6" : "h-[30px] w-[30px]",
+  );
 
   return (
-    <div className={`${styles.stepper} ${styles[size]}`} role="group" aria-label={ariaLabel}>
+    <div className="inline-flex items-center gap-1.5" role="group" aria-label={ariaLabel}>
       <button
         type="button"
-        className={styles.btn}
+        className={btnClass}
         onClick={onDecrement}
         disabled={atMin}
         aria-label={`Decrease ${ariaLabel}`}
       >
-        <Icon name="minus" size={size === "line" ? 14 : 16} />
+        <Icon name="minus" size={iconSize} />
       </button>
-      <span className={styles.value} aria-live="polite">
+      <span
+        aria-live="polite"
+        className={cn(
+          "text-center font-semibold tabular-nums text-ink",
+          size === "line" ? "min-w-[1rem] text-sm" : "min-w-[1.25rem] text-[15px]",
+        )}
+      >
         {value}
       </span>
       <button
         type="button"
-        className={styles.btn}
+        className={btnClass}
         onClick={onIncrement}
         disabled={atMax}
         aria-label={`Increase ${ariaLabel}`}
       >
-        <Icon name="plus" size={size === "line" ? 14 : 16} />
+        <Icon name="plus" size={iconSize} />
       </button>
     </div>
   );

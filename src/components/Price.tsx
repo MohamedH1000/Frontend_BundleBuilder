@@ -1,5 +1,5 @@
 import { formatMoney, formatRecurring } from "../lib/format";
-import styles from "./Price.module.css";
+import { cn } from "../lib/cn";
 
 interface PriceProps {
   active: number;
@@ -28,13 +28,33 @@ export function Price({
   const compareText = recurring ? formatRecurring(compareAt!) : formatMoney(compareAt!);
 
   return (
-    <div className={`${styles.price} ${styles[size]} ${styles[align]}`}>
+    <div
+      className={cn(
+        "flex flex-col gap-px leading-[1.1] whitespace-nowrap",
+        align === "end" ? "items-end" : "items-start",
+        size === "sm" && "gap-0",
+      )}
+    >
       {showCompare && (
-        <span className={styles.compare} data-testid="price-compare">
+        <span
+          data-testid="price-compare"
+          className={cn(
+            "text-compare line-through decoration-1",
+            size === "lg" ? "text-[13px]" : "text-xs",
+          )}
+        >
           {compareText}
         </span>
       )}
-      <span className={`${styles.active} ${free ? styles.freeActive : ""}`}>{activeText}</span>
+      <span
+        className={cn(
+          "font-bold",
+          free ? "text-success tracking-[0.02em]" : "text-brand",
+          size === "lg" ? "text-[15px]" : "text-sm",
+        )}
+      >
+        {activeText}
+      </span>
     </div>
   );
 }

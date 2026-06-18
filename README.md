@@ -81,6 +81,7 @@ src/
   lib/
     pricing.ts                 # PURE money engine: line totals, subtotals, savings, financing
     format.ts                  # currency formatting + round2
+    cn.ts                      # className join helper (conditional Tailwind classes)
   state/
     reducer.ts                 # the only authority over state mutation (typed actions)
     persistence.ts             # versioned localStorage (load / save / clear + validation)
@@ -112,8 +113,10 @@ src/
   component changes.
 - **Persistence as a side-effect boundary.** `persistence.ts` is the only thing
   that touches `localStorage`; the provider wires it in via an effect.
-- **Design tokens.** All colour/spacing/radius/motion values live as CSS custom
-  properties in `index.css`, so re-theming is a one-file change.
+- **Design tokens.** All colour/spacing/radius/motion values live in the
+  Tailwind `@theme` block in `index.css`, so they generate utilities
+  (`bg-brand`, `text-ink-soft`, `border-line`, …) and re-theming is a one-file
+  change.
 
 ---
 
@@ -202,5 +205,6 @@ that doesn't derive cleanly from the shown total, so I compute it instead.
 
 ## Tech
 
-React 19 · TypeScript (strict) · Vite · CSS Modules + design tokens · Vitest.
-No UI kit, no state library — intentionally dependency-light to show the craft.
+React 19 · TypeScript (strict) · Vite · Tailwind CSS v4 (design tokens via
+`@theme`) · Vitest. No UI kit, no state library — intentionally
+dependency-light to show the craft.

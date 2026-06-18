@@ -1,5 +1,0 @@
-/* No enclosing card around the steps — the source design has them sitting
- * directly on the page, separated only by the per-step divider lines. */
-.builder {
-  background: var(--surface);
-}

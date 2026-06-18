@@ -1,10 +1,9 @@
 import type { Step } from "../../types";
 import { useBundle } from "../../state/BundleContext";
-import { productsByStep } from "../../data/catalog";
-import { steps } from "../../data/catalog";
+import { productsByStep, steps } from "../../data/catalog";
 import { ProductCard } from "../../components/ProductCard";
 import { Icon, StepIcon } from "../../components/icons";
-import styles from "./StepSection.module.css";
+import { cn } from "../../lib/cn";
 
 interface StepSectionProps {
   step: Step;
@@ -29,31 +28,29 @@ export function StepSection({ step }: StepSectionProps) {
   const products = productsByStep(step.id);
 
   return (
-    <section className={`${styles.step} ${isOpen ? styles.open : ""}`}>
+    <section className={cn("border-b border-line bg-white", "[&:last-child]:border-b-0", isOpen && "!bg-step-open")}>
       <button
         type="button"
-        className={styles.header}
         aria-expanded={isOpen}
         aria-controls={`step-panel-${step.id}`}
         onClick={() => toggleStep(step.id)}
+        className="block w-full px-4 py-[18px] text-left transition-colors hover:bg-step-open max-[560px]:px-3.5 max-[560px]:py-3.5"
       >
-        <span className={styles.eyebrow}>
+        <span className="mb-1.5 block text-[11px] font-bold uppercase tracking-[0.08em] text-ink-soft">
           Step {step.index} of {step.total}
         </span>
 
-        <span className={styles.headerRow}>
-          <span className={styles.icon} aria-hidden>
+        <span className="flex items-center gap-3">
+          <span className="inline-flex flex-none items-center justify-center" aria-hidden>
             <StepIcon name={step.icon} size={26} />
           </span>
-          <span className={styles.title}>{step.title}</span>
+          <span className="min-w-0 flex-1 text-lg font-bold text-ink max-[560px]:text-base">
+            {step.title}
+          </span>
 
-          <span className={styles.indicator}>
-            {isOpen && (
-              <span className={styles.count}>
-                {selectedCount} selected
-              </span>
-            )}
-            <span className={styles.chevron} aria-hidden>
+          <span className="inline-flex flex-none items-center gap-2.5">
+            {isOpen && <span className="text-[13px] font-semibold text-ink-soft">{selectedCount} selected</span>}
+            <span className="inline-flex text-ink-soft" aria-hidden>
               <Icon name={isOpen ? "chevron-up" : "chevron-down"} size={20} />
             </span>
           </span>
@@ -61,17 +58,21 @@ export function StepSection({ step }: StepSectionProps) {
       </button>
 
       {isOpen && (
-        <div className={styles.panel} id={`step-panel-${step.id}`} role="region">
-          <div className={styles.grid}>
+        <div id={`step-panel-${step.id}`} role="region" className="animate-reveal bg-step-open px-4 pb-[22px] pt-[18px] max-[560px]:px-3.5 max-[560px]:pb-[18px] max-[560px]:pt-3.5">
+          <div className="card-grid">
             {products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
 
           {nextStepMeta && (
-            <button type="button" className={styles.nextButton} onClick={nextStep}>
+            <button
+              type="button"
+              onClick={nextStep}
+              className="mt-[18px] inline-flex items-center gap-1.5 rounded-[10px] border-[2px] border-brand px-[22px] py-3 text-[15px] font-semibold text-brand shadow-[0_6px_16px_rgba(78,47,210,0.35)] transition-colors active:translate-y-px"
+            >
               Next: {nextStepMeta.title}
-              <Icon name="chevron-down" size={18} className={styles.nextIcon} />
+              <Icon name="chevron-down" size={18} className="-rotate-90" />
             </button>
           )}
         </div>

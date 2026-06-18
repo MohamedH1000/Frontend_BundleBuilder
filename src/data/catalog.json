@@ -41,7 +41,7 @@
       "longDescription": "Color night vision and a built-in spotlight in our sharpest camera yet.",
       "category": "cameras",
       "step": "cameras",
-      "icon": "camera",
+      "icon": "/assets/Wyze_Cam_V4_01.0001.png",
       "learnMoreUrl": "#cam-v4",
       "variants": [
         { "id": "white", "label": "White", "swatch": "#ffffff" },
@@ -58,7 +58,7 @@
       "longDescription": "Cover every corner with smooth pan, tilt and IP65 weather resistance.",
       "category": "cameras",
       "step": "cameras",
-      "icon": "pan",
+      "icon": "/assets/Frame 4479.png",
       "badge": "Save 12%",
       "learnMoreUrl": "#cam-pan-v3",
       "variants": [
@@ -75,7 +75,7 @@
       "longDescription": "Motion-activated LED floodlight and a 160° field of view.",
       "category": "cameras",
       "step": "cameras",
-      "icon": "floodlight",
+      "icon": "/assets/image_16.png",
       "badge": "Save 22%",
       "learnMoreUrl": "#cam-floodlight-v2",
       "variants": [
@@ -92,7 +92,7 @@
       "longDescription": "Front and down-facing cameras for a complete view of your doorstep.",
       "category": "cameras",
       "step": "cameras",
-      "icon": "doorbell",
+      "icon": "/assets/image 110.png",
       "learnMoreUrl": "#duo-doorbell",
       "price": 69.98
     },
@@ -103,7 +103,7 @@
       "longDescription": "Wire-free security with a removable battery and spotlight.",
       "category": "cameras",
       "step": "cameras",
-      "icon": "battery",
+      "icon": "/assets/image 112.png",
       "learnMoreUrl": "#battery-cam-pro",
       "variants": [
         { "id": "white", "label": "White", "swatch": "#ffffff" },
